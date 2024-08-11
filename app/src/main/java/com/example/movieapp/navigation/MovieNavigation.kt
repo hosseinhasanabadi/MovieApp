@@ -4,6 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.movieapp.screens.datalis.DetailsScreen
+import com.example.movieapp.screens.home.HomeScreen
+
 
 @Composable
 fun MovieNavigation() {
@@ -13,7 +16,11 @@ fun MovieNavigation() {
         startDestination = MovieScreens.HomeScreen.name
     ) {
         composable(MovieScreens.HomeScreen.name) {
-            //HomeScreen(navController = navController)
+            HomeScreen(navController = navController)
         }
+        composable(MovieScreens.DetailsScreen.name) {
+            DetailsScreen(navController = navController)
+        }
+
     }
 }
